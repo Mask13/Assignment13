@@ -103,7 +103,8 @@ class User(Base):
             )
             
             db.add(new_user)
-            db.flush()
+            db.commit()
+            db.refresh(new_user)
             return new_user
             
         except ValidationError as e:
