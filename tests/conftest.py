@@ -170,6 +170,13 @@ def seed_users(db_session: Session, request) -> List[User]:
 def fastapi_server():
     """Start and manage a FastAPI test server."""
     server_url = 'http://127.0.0.1:8000/'
+    
+    # Check if server is already running
+    if wait_for_server(server_url, timeout=1):
+        logger.info("Server already running, skipping startup...")
+        yield
+        return
+
     logger.info("Starting FastAPI server...")
 
     process = subprocess.Popen(
