@@ -1,8 +1,4 @@
-# 📦 Assignment 11 - FastAPI with Polymorphic SQLAlchemy Models
-
-## ✅ Module 11 Implementation
-
-This project demonstrates **SQLAlchemy polymorphic inheritance** for calculations with comprehensive Pydantic schemas and 96%+ test coverage.
+# 📦 Assignment 13 - Login/Registration with Client-Side Validation & Playwright E2E
 
 ### 🎯 Key Features
 - **Polymorphic Models**: Single-table inheritance with `Calculation` base class and `Addition`, `Subtraction`, `Multiplication`, `Division` subclasses
@@ -10,11 +6,12 @@ This project demonstrates **SQLAlchemy polymorphic inheritance** for calculation
 - **Pydantic Validation**: Comprehensive schemas with LBYL (Look Before You Leap) approach
 - **96% Test Coverage**: 137 tests covering models, schemas, auth, and edge cases
 - **CI/CD Pipeline**: Automated testing with 95% coverage threshold enforcement
+- **User Registration**: Salted passwords with user registration and login endpoints
 
 ### 📊 Test Results
 ```
-✅ 137 tests passed, 1 skipped
-✅ Coverage: 96.47% (exceeds 95% threshold)
+✅ 144 tests passed, 1 skipped
+✅ Coverage: 97.38% (exceeds 95% threshold)
 ✅ All polymorphic behaviors verified
 ✅ All validation rules tested
 ```
@@ -93,12 +90,12 @@ FastAPI provides an interactive API documentation interface (Swagger UI) that al
 ## 🐳 Docker Hub Repository
 
 The Docker image for this project is available on Docker Hub:
-[happymask13/assignment11](https://hub.docker.com/repository/docker/happymask13/assignment11/general)
+[happymask13/assignment13](https://hub.docker.com/repository/docker/happymask13/assignment13/general)
 
 To pull and run the image:
 ```bash
-docker pull happymask13/assignment11:latest
-docker run -p 8000:8000 happymask13/assignment11:latest
+docker pull happymask13/assignment13:latest
+docker run -p 8000:8000 happymask13/assignment13:latest
 ```
 
 ---
