@@ -6,7 +6,7 @@ from uuid import UUID
 import logging
 
 from fastapi import FastAPI, Depends, HTTPException, status, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi.exceptions import RequestValidationError
@@ -68,6 +68,14 @@ async def read_root(request: Request):
     Serve the index.html template.
     """
     return templates.TemplateResponse("index.html", {"request": request})
+
+@app.get("/register", response_class=HTMLResponse)
+def register_page(request: Request):
+    return templates.TemplateResponse("register.html", {"request": request})
+
+@app.get("/login", response_class=HTMLResponse)
+def login_page(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
 
 # Simple Calculator Endpoints
 
